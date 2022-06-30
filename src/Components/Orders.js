@@ -11,7 +11,7 @@ function Orders() {
     axios
       .post("/orders/get", { email: user.email })
       .then((res) => setOrders(res.data));
-  }, []);
+  }, [user.email]);
   console.log(orders);
 
   return (
